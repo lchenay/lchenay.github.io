@@ -6,7 +6,7 @@
 </head>
 <body onload="initPuzzle();">
 <div id="puzzle" style="display: inline; width: 100%">
-<p align="center" style="display: none;">
+<p style="display: none;">
   <input type="button" id="new" value="New game">
   <input type="button" id="restart" value="Restart game">
   <input type="button" id="undo" value="Undo move" disabled="">
@@ -16,9 +16,9 @@
   <input type="button" id="random" value="Enter random seed">
   <select id="gametype"><option value="0">2x2 Trivial</option><option value="1">2x3 Basic</option><option value="2">3x3 Trivial</option><option value="3">3x3 Basic</option><option value="4">3x3 Basic X</option><option value="5">3x3 Intermediate</option><option value="6">3x3 Advanced</option><option value="7">3x3 Advanced X</option><option value="8">3x3 Extreme</option><option value="9">3x3 Unreasonable</option><option value="10">3x3 Killer</option><option value="11">9 Jigsaw Basic</option><option value="12">9 Jigsaw Basic X</option><option value="13">9 Jigsaw Advanced</option><option value="-1">Customise...</option></select>
 </p>
-<div align="center" style="width: 100%">
+<div style="width: 100%">
   <div id="resizable" style="position: relative; left: 0px; top: 0px; width: 100%;">
-  <canvas style="display: block" id="puzzlecanvas" width="100%" height="100%" tabindex="1">
+  <canvas style="display: block; width: 100%; height: 100%" id="puzzlecanvas" tabindex="1">
   </canvas>
   <div id="statusbarholder" style="display: block">
   </div>

@@ -371,7 +371,7 @@ function initPuzzle() {
     // we haven't crashed for one reason or another during setup, then
     // it's probably safe to hide the 'sorry, no puzzle here' div and
     // show the div containing the actual puzzle.
-    document.getElementById("apology").style.display = "none";
+    //document.getElementById("apology").style.display = "none";
     document.getElementById("puzzle").style.display = "inline";
 }
 
@@ -5724,8 +5724,8 @@ function copyTempDouble(ptr) {
           ctx.fillText(Pointer_stringify(text), x, y);
       }
 
-  function _js_canvas_draw_rect(x, y, w, h, colptr) {)
-          if (colptr == "5262592") {
+  function _js_canvas_draw_rect(x, y, w, h, colptr) {
+          if (colptr == "5262600" || colptr == "5262584") {
             ctx.fillStyle = "#fff";
           } else {
             ctx.fillStyle = Pointer_stringify(colptr);
@@ -5880,10 +5880,11 @@ function copyTempDouble(ptr) {
               statusbar.style.width = (w - 4) + "px";
               document.getElementById("statusbarholder").style.width = w + "px";
           }
-          //resizable_div.style.width = w + "px";
+          resizable_div.style.width = w + "px";
 
           onscreen_canvas.height = h;
           offscreen_canvas.height = h;
+          return;
       }
 
   function _js_select_preset(n) {
