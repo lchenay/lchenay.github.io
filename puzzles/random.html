@@ -14,8 +14,16 @@
     }
 
     @media print {
-        @page { margin: 0; width: 50px;}
-        body { margin: 0; width: 50px }
+        @page { 
+            margin: 0; 
+            box-shadow: 0;
+            size: 5.3cm 5.3cm;
+        }
+        html, body { 
+            margin: 0; 
+            height:100%;
+            size: 5.3cm 5.3cm;
+        }
     }
     
 </style>
