@@ -10,8 +10,8 @@
     }
 
     @media print {
-        @page { margin: 0; }
-        body { margin: 0; }
+        @page { margin: 0; width: 50px;}
+        body { margin: 0; width: 50px }
     }
 </style>
 
@@ -26,6 +26,8 @@ window.onload = function() {
     document.write(
         "<img src=\"./random/" + item + "\" />"
     );
+
+    window.location.href = "./random/" + item
 }
  </script>
 
