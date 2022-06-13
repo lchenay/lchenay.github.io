@@ -2,6 +2,10 @@
     *{margin:0;padding:0}
     th,td,p,div,b {margin:0;padding:0}
     html{margin:0px 0px}
+    
+    img {
+        width: 100%;
+    }
 
     hr {
         height: 6px;
@@ -13,6 +17,7 @@
         @page { margin: 0; width: 50px;}
         body { margin: 0; width: 50px }
     }
+    
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -24,15 +29,13 @@ window.onload = function() {
 
     item = data[Math.floor(Math.random()*data.length)];
     document.write(
-        "<img src=\"./" + item + "\" />"
+        "<img src=\"./" + item.replace('pdf', 'png') + "\" style=\"width: 100%\" />"
     );
 
-    window.location.href = "./" + item
+    //window.location.href = "./" + item
 }
  </script>
 
-<script id="random" type="application/json">["random/0a8dde7dbe017947d460c0117892dd3057accd54.pdf","random/183fec6d8f57b744405522aa5669cc3de1fca387.pdf","random/23ff560531aca7730d264dcb4824c8f98e2aa9d2.pdf","random/33fd4034e9c75eb3b77d4c633691183874d81f1e.pdf","random/5e723c62afe402e7e05df6461e50369eedbcc189.pdf","random/942953863a5aedeed719811bd3c0050ec7ee445b.pdf","random/9ce420a6b3dc5bf56976293d06b0e4bd5e6d1f25.pdf","random/b36af34c586a11e2876eeb5373936fb07db868f6.pdf","random/d04f154e5bfce30b6fc66c5dab3b4d2d837a7b37.pdf","random/d65ad4e6c746ed8af013f1b70342ae3e71548033.pdf","random/d6a47a158a8098b0573ad7fe5a0e41e7c29f182c.pdf","random/e5145849f3f7c525481ac1c48a90f37faa6d2b4e.pdf","random/f52a6ded7c9c41e9b186ec5fb85a9e4333897b45.pdf"]
-
-
+<script id="random" type="application/json">["random/28ba28af61c3c352eec2145496527a5d27edf66e.pdf","random/342811580a946246854ad1f2d7f60fb6314e26b5.pdf","random/63a41c9e4a4b1b7c4e2a9da2dbc62536dc8894d6.pdf","random/6f2610efe4f1ed6d66c37262f59fdb74b8eb96e4.pdf","random/9ae9510618ffba3816ac786e4bd6210af00a5f4a.pdf","random/b8e01d5f9c9e43775723337e8036d69c9e29f511.pdf","random/c1e0db4b7b18c4a5d4c11eb423c6746dd3656a03.pdf","random/d0ab7b6b528a3209408bc38f9d352fa81c152016.pdf","random/db893c365100bbc8bdc885321c942247e4d3711c.pdf","random/e9dfc6ee034fe8adfae45c91ef20ba7f5a3f9e7a.pdf","random/ed8f66412533a334171b9c4c94d63d5caea8c89a.pdf","random/fb4fe349d227a639de4b7a91607fe4524d71513a.pdf"]
 
 </script>
