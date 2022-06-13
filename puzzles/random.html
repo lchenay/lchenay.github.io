@@ -1,50 +1,75 @@
-<style>
-    *{margin:0;padding:0}
-    th,td,p,div,b {margin:0;padding:0}
-    html{margin:0px 0px}
-    
-    img {
-        width: 100%;
-    }
-
-    hr {
-        height: 6px;
-        color: black;
-        background-color: black;
-    }
-
-    @media print {
-        @page { 
-            margin: 0; 
-            box-shadow: 0;
-            size: 5.3cm 5.3cm;
+<html>
+    <style>
+        *{margin:0;padding:0}
+        th,td,p,div,b {margin:0;padding:0}
+        body{
+            margin: 0px 0px 0px 0px !important
         }
-        html, body { 
-            margin: 0; 
-            height:100%;
-            size: 5.3cm 5.3cm;
+        body {
+            margin: 0;
         }
-    }
-    
-</style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        html, body {
+            height: 100%
+        }
+        body {
+            align-items: stretch;
+        }
+        
+        img {
+            width: 100%;
+        }
 
-<script> 
+        hr {
+            height: 6px;
+            color: black;
+            background-color: black;
+        }
 
-window.onload = function() {
-    var data = JSON.parse(document.getElementById('random').textContent)
+        @media print {
+            @page { 
+                margin: 0; 
+                box-shadow: 0;
+                size: 5.3cm 5.3cm;
+            }
+            html, body { 
+                margin: 0; 
+                height:100%;
+                size: 5.3cm 5.3cm;
+            }
+        }
+        
+    </style>
 
-    item = data[Math.floor(Math.random()*data.length)];
-    document.write(
-        "<img src=\"./" + item.replace('pdf', 'png') + "\" style=\"width: 100%\" />"
-    );
-
-    //window.location.href = "./" + item
-}
- </script>
-
-<script id="random" type="application/json">["random/02c1d893e7c424cfb9ea8593ba8b68fdf8010328.pdf","random/033485447f25479724e0dfa8c5ae01ee58fe2468.pdf","random/1043353ef87b27facfa4a7a34b6c99c05ce98ddc.pdf","random/10d481595b6581058a9450652d4bc7f157af1354.pdf","random/259eed3f187302b65231e3846810b22a33584fb3.pdf","random/28ba28af61c3c352eec2145496527a5d27edf66e.pdf","random/2b6e0b5db2a63ec77cef8b63ab572139a39d8aac.pdf","random/30867024f2ae033eef06b9e37cfc3430a202cae7.pdf","random/30dd53aae74a3dd366876472b12592cfcb86c3f5.pdf","random/3309e2ebaf1d8251c1e7b4a8442b767587745f82.pdf","random/342811580a946246854ad1f2d7f60fb6314e26b5.pdf","random/34be6762de611032c4814c0178723a7c4084f901.pdf","random/367b167c052e22b0a612aac890541bfa3469bc05.pdf","random/41fee73fc92f9a174a29bd785bc7204a0883b249.pdf","random/48436d93f1044267afa44c8d3d5d3e3ec22fedbe.pdf","random/4cac0e315bdf2a2cddba08ed4aa4329ff7d2135b.pdf","random/55ad6f5896f276ad58ad76a9c62857829b35c071.pdf","random/622b1190ab305e69e3d6129ce728bf0400c4f527.pdf","random/63a41c9e4a4b1b7c4e2a9da2dbc62536dc8894d6.pdf","random/6f2610efe4f1ed6d66c37262f59fdb74b8eb96e4.pdf","random/8217438e90866fe46679b8bfed84bc2ac6f599c6.pdf","random/836774677cdcc9364dab61523deb77a0915a6e11.pdf","random/8974c24801f84eb68d70815fffd04e3178e1b684.pdf","random/8f7a3dd3c482fcd3481f100b9638ff00775e35de.pdf","random/90e40d133064f7354b00dbe32d2af864f8893d5e.pdf","random/9ae9510618ffba3816ac786e4bd6210af00a5f4a.pdf","random/9d1cdce0a920dd3b30fa00f26ddfd2c5f8ac80c3.pdf","random/a0fbb1ed832263834009102cac7482fa174d66a8.pdf","random/a1a7230e9745795d0724cf5ea419095127ec9425.pdf","random/abe53c10a1d54561b848370f823457b8b8114826.pdf","random/b2f8b798e864746bd83d4cbfe1b8f97380726549.pdf","random/b8e01d5f9c9e43775723337e8036d69c9e29f511.pdf","random/ba6b418baeb82ad96caf2142d1ced99f36406a10.pdf","random/c1e0db4b7b18c4a5d4c11eb423c6746dd3656a03.pdf","random/cd3ddbcb220747fd6cb8a80473e77b521d26ac1c.pdf","random/d0ab7b6b528a3209408bc38f9d352fa81c152016.pdf","random/db893c365100bbc8bdc885321c942247e4d3711c.pdf","random/df564aac2a5efb90a49abc67b2cdb1d407c66b35.pdf","random/e952d0611159a15c97396c0b454142a8f880d9bd.pdf","random/e9dfc6ee034fe8adfae45c91ef20ba7f5a3f9e7a.pdf","random/ed8f66412533a334171b9c4c94d63d5caea8c89a.pdf","random/f33203a57c2dc76a2d5a78e14b73166e5ea71adb.pdf","random/f5a4f5d7315c82e652cd0d5f2296b5683d7c4f99.pdf","random/f8a4922e8f90232146a46b4c1138e2bf9d851907.pdf","random/fab0f34ee34301fe7d497c3faa19bd66eed761eb.pdf","random/fb4fe349d227a639de4b7a91607fe4524d71513a.pdf","random/fe9ab84cfa1c0a08f384894aad8ea01c984dd5ca.pdf","random/ffaeac41801ef8b5db670ad7a071f58991e3cb0b.pdf"]
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-</script>
+    <body style="margin: 0px 0px 0px 0px">
+        <script> 
+
+        window.onload = function() {
+            var data = JSON.parse(document.getElementById('random').textContent)
+
+            item = data[Math.floor(Math.random()*data.length)];
+            img = document.getElementById("item")
+            img.onload = function() {
+                document.getElementsByTagName("html")[0].style.height = img.height
+                document.getElementsByTagName("body")[0].style.height = img.height
+            }
+            img.src = item.replace('pdf', 'png');
+
+            
+
+            
+            //window.location.href = "./" + item
+        }
+        </script>
+
+        <img id="item" src="" style="width: 100%" />
+
+        <script id="random" type="application/json">["random/02c1d893e7c424cfb9ea8593ba8b68fdf8010328.pdf","random/033485447f25479724e0dfa8c5ae01ee58fe2468.pdf","random/1043353ef87b27facfa4a7a34b6c99c05ce98ddc.pdf","random/10d481595b6581058a9450652d4bc7f157af1354.pdf","random/259eed3f187302b65231e3846810b22a33584fb3.pdf","random/28ba28af61c3c352eec2145496527a5d27edf66e.pdf","random/2b6e0b5db2a63ec77cef8b63ab572139a39d8aac.pdf","random/30867024f2ae033eef06b9e37cfc3430a202cae7.pdf","random/30dd53aae74a3dd366876472b12592cfcb86c3f5.pdf","random/3309e2ebaf1d8251c1e7b4a8442b767587745f82.pdf","random/342811580a946246854ad1f2d7f60fb6314e26b5.pdf","random/34be6762de611032c4814c0178723a7c4084f901.pdf","random/367b167c052e22b0a612aac890541bfa3469bc05.pdf","random/41fee73fc92f9a174a29bd785bc7204a0883b249.pdf","random/48436d93f1044267afa44c8d3d5d3e3ec22fedbe.pdf","random/4cac0e315bdf2a2cddba08ed4aa4329ff7d2135b.pdf","random/55ad6f5896f276ad58ad76a9c62857829b35c071.pdf","random/622b1190ab305e69e3d6129ce728bf0400c4f527.pdf","random/63a41c9e4a4b1b7c4e2a9da2dbc62536dc8894d6.pdf","random/6f2610efe4f1ed6d66c37262f59fdb74b8eb96e4.pdf","random/8217438e90866fe46679b8bfed84bc2ac6f599c6.pdf","random/836774677cdcc9364dab61523deb77a0915a6e11.pdf","random/8974c24801f84eb68d70815fffd04e3178e1b684.pdf","random/8f7a3dd3c482fcd3481f100b9638ff00775e35de.pdf","random/90e40d133064f7354b00dbe32d2af864f8893d5e.pdf","random/9ae9510618ffba3816ac786e4bd6210af00a5f4a.pdf","random/9d1cdce0a920dd3b30fa00f26ddfd2c5f8ac80c3.pdf","random/a0fbb1ed832263834009102cac7482fa174d66a8.pdf","random/a1a7230e9745795d0724cf5ea419095127ec9425.pdf","random/abe53c10a1d54561b848370f823457b8b8114826.pdf","random/b2f8b798e864746bd83d4cbfe1b8f97380726549.pdf","random/b8e01d5f9c9e43775723337e8036d69c9e29f511.pdf","random/ba6b418baeb82ad96caf2142d1ced99f36406a10.pdf","random/c1e0db4b7b18c4a5d4c11eb423c6746dd3656a03.pdf","random/cd3ddbcb220747fd6cb8a80473e77b521d26ac1c.pdf","random/d0ab7b6b528a3209408bc38f9d352fa81c152016.pdf","random/db893c365100bbc8bdc885321c942247e4d3711c.pdf","random/df564aac2a5efb90a49abc67b2cdb1d407c66b35.pdf","random/e952d0611159a15c97396c0b454142a8f880d9bd.pdf","random/e9dfc6ee034fe8adfae45c91ef20ba7f5a3f9e7a.pdf","random/ed8f66412533a334171b9c4c94d63d5caea8c89a.pdf","random/f33203a57c2dc76a2d5a78e14b73166e5ea71adb.pdf","random/f5a4f5d7315c82e652cd0d5f2296b5683d7c4f99.pdf","random/f8a4922e8f90232146a46b4c1138e2bf9d851907.pdf","random/fab0f34ee34301fe7d497c3faa19bd66eed761eb.pdf","random/fb4fe349d227a639de4b7a91607fe4524d71513a.pdf","random/fe9ab84cfa1c0a08f384894aad8ea01c984dd5ca.pdf","random/ffaeac41801ef8b5db670ad7a071f58991e3cb0b.pdf"]
+
+
+        </script>
+    </body>
+</html>
