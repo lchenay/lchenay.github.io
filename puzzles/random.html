@@ -35,7 +35,8 @@
             box-shadow: 0;
         }
 
-        html, body { 
+        html, body {
+            width: 5.3cm;
             margin: 0; 
             height:100%;
         }
@@ -67,6 +68,9 @@
             img.onload = function() {
                 document.getElementsByTagName("html")[0].style.height = img.height
                 document.getElementsByTagName("body")[0].style.height = img.height
+
+                document.getElementsByTagName("html")[0].style.width = img.width
+                document.getElementsByTagName("body")[0].style.width = img.width
 
                 cssPagedMedia.size(`${img.width}px ${img.height + 1}px`);
             }
