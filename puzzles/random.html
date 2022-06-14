@@ -68,7 +68,7 @@
                 document.getElementsByTagName("html")[0].style.height = img.height
                 document.getElementsByTagName("body")[0].style.height = img.height
 
-                cssPagedMedia.size(`${img.width}px ${img.height}px`);
+                cssPagedMedia.size(`${img.width}px ${img.height + 1}px`);
             }
             img.src = item.replace('pdf', 'png');
 
